@@ -1,0 +1,55 @@
+# ===== Secrets =====
+.env
+.env.local
+.env.*.local
+# .env.example est volontairement suivi (template sans secrets)
+
+# ===== Python / Django =====
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.Python
+
+# Environnements virtuels
+.venv/
+venv/
+env/
+
+# Bases de données
+db.sqlite3
+*.sqlite3
+*.sqlite3-journal
+
+# Fichiers Django générés
+backend/media/
+backend/staticfiles/
+*.log
+
+# Tests et couverture
+.pytest_cache/
+.coverage
+htmlcov/
+coverage/
+
+# Distribution / packaging Python
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# ===== Node / Vite =====
+node_modules/
+frontend/dist/
+frontend/build/
+.vite/
+*.local
+
+# ===== IDE / OS =====
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo

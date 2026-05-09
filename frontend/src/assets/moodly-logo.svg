@@ -1,0 +1,101 @@
+<svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient principal baby pink vers violet -->
+    <linearGradient id="mainGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFB3D9;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#E695D8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#B57EDC;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Gradient pour les bulles de dialogue -->
+    <linearGradient id="bubbleGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFF5FA;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Ombre douce -->
+    <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="8"/>
+      <feOffset dx="0" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Ombre pour les bulles -->
+    <filter id="bubbleShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Fond arrondi avec gradient -->
+  <rect width="400" height="400" rx="90" fill="url(#mainGradient)"/>
+  
+  <!-- Effet de lumière subtil en haut -->
+  <ellipse cx="200" cy="80" rx="160" ry="60" fill="white" opacity="0.15"/>
+  
+  <!-- Groupe des bulles de conversation -->
+  <g filter="url(#bubbleShadow)">
+    <!-- Bulle de gauche -->
+    <g>
+      <!-- Corps de la bulle -->
+      <circle cx="140" cy="160" r="65" fill="url(#bubbleGradient)"/>
+      
+      <!-- Queue de la bulle gauche -->
+      <path d="M 100 200 Q 85 220 75 225 Q 90 220 100 210 Z" fill="url(#bubbleGradient)"/>
+      
+      <!-- Visage souriant gauche -->
+      <!-- Œil gauche -->
+      <circle cx="125" cy="150" r="8" fill="#E695D8"/>
+      <!-- Œil droit -->
+      <circle cx="155" cy="150" r="8" fill="#E695D8"/>
+      <!-- Sourire -->
+      <path d="M 120 170 Q 140 185 160 170" stroke="#E695D8" stroke-width="5" stroke-linecap="round" fill="none"/>
+    </g>
+    
+    <!-- Bulle de droite (légèrement plus petite et superposée) -->
+    <g>
+      <!-- Corps de la bulle -->
+      <circle cx="230" cy="180" r="55" fill="url(#bubbleGradient)"/>
+      
+      <!-- Queue de la bulle droite -->
+      <path d="M 270 215 Q 285 230 295 233 Q 280 230 270 222 Z" fill="url(#bubbleGradient)"/>
+      
+      <!-- Visage souriant droit -->
+      <!-- Œil gauche -->
+      <circle cx="215" cy="172" r="7" fill="#B57EDC"/>
+      <!-- Œil droit -->
+      <circle cx="245" cy="172" r="7" fill="#B57EDC"/>
+      <!-- Sourire -->
+      <path d="M 213 188 Q 230 200 247 188" stroke="#B57EDC" stroke-width="4" stroke-linecap="round" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Petits cœurs décoratifs -->
+  <g opacity="0.4">
+    <path d="M 310 120 C 310 115 315 110 320 110 C 325 110 330 115 330 120 C 330 128 320 135 320 135 C 320 135 310 128 310 120 Z" fill="white"/>
+    <path d="M 80 270 C 80 266 84 262 88 262 C 92 262 96 266 96 270 C 96 276 88 282 88 282 C 88 282 80 276 80 270 Z" fill="white"/>
+  </g>
+  
+  <!-- Texte "Moodly" -->
+  <text x="200" y="310" font-family="'Arial Rounded MT Bold', 'Quicksand', sans-serif" font-size="56" font-weight="700" text-anchor="middle" fill="white" filter="url(#softShadow)">
+    Moodly
+  </text>
+  
+  <!-- Tagline optionnelle -->
+  <text x="200" y="345" font-family="'Arial', sans-serif" font-size="18" font-weight="400" text-anchor="middle" fill="white" opacity="0.9">
+    Conversations Émotionnelles
+  </text>
+</svg>

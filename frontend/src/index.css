@@ -1,0 +1,97 @@
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* FORCER LES TEXTES EN NOIR POUR MEILLEUR CONTRASTE */
+* {
+  color: #000000 !important;
+}
+
+/* Exceptions pour les textes sur fond coloré */
+[style*="background: linear-gradient"],
+[style*="background-color: #a855f7"],
+[style*="background-color: #7c3aed"],
+[style*="background: #a855f7"],
+.btn-primary,
+[style*="color: theme.white"],
+[style*="color: white"] {
+  color: #ffffff !important;
+}
+
+/* Styles de base */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #faf5ff 0%, #fdf2f8 100%);
+  min-height: 100vh;
+  color: #000000 !important;
+}
+
+/* Composants simplifiés sans @apply problématique */
+.btn-primary {
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  color: white !important;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.btn-primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
+.btn-secondary {
+  background: white;
+  color: #9333ea !important;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 16px;
+  border: 1px solid #e9d5ff;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.card-glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 24px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  color: #000000 !important;
+}
+
+/* Assurer que tous les textes sont visibles */
+p, h1, h2, h3, h4, h5, h6, span, div {
+  color: #000000 !important;
+}
+
+/* Textes sur fond sombre */
+[style*="background: #0f172a"],
+[style*="background-color: #0f172a"],
+[style*="background: theme.dark"] {
+  color: #ffffff !important;
+}
+
+[style*="background: #0f172a"] p,
+[style*="background: #0f172a"] h1,
+[style*="background: #0f172a"] h2,
+[style*="background: #0f172a"] h3,
+[style*="background: #0f172a"] h4,
+[style*="background: #0f172a"] h5,
+[style*="background: #0f172a"] h6,
+[style*="background: #0f172a"] span,
+[style*="background: #0f172a"] div {
+  color: #ffffff !important;
+}
