@@ -252,7 +252,7 @@ La liste complète est dans [backend/README.md](backend/README.md).
 |---|---|
 | **Oumaima Damiri** | Développeuse Full-Stack & IoT |
 | **Jihane El Berkaoui** | Développeuse Full-Stack |
-| **KAWTAR Elhamraoui** | Développeuse Full-Stack |
+| **Kawtar Elhamraoui.** | Développeuse Full-Stack |
 
 **Superviseur :** Pr. EL KASMI ALAOUI Seddiq
 
